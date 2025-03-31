@@ -3,19 +3,14 @@ async function sendQuestion() {
   const responseDiv = document.getElementById("response");
   responseDiv.innerHTML = "Thinking...";
 
-  try {
-    const res = await fetch("https://deepseek-backend.leonabedwards.repl.co/ask", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ prompt: userInput })
-    });
-
-    const data = await res.json();
-    responseDiv.innerHTML = data.response || "No response received.";
-  } catch (error) {
-    responseDiv.innerHTML = "Error contacting the model.";
-    console.error(error);
-  }
+  // Simulate a fake response after a delay
+  setTimeout(() => {
+    responseDiv.innerHTML = `
+      <strong>Response:</strong><br><br>
+      Based on your input, we recommend planting native trees in clustered formations to promote microhabitats.<br>
+      Use a mix of ground cover and pollinator-friendly shrubs between rows to improve biodiversity.<br>
+      Maintain tree spacing of 2-3m for light and root efficiency.
+    `;
+  }, 1000);
 }
+
