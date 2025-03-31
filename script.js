@@ -4,7 +4,7 @@ async function sendQuestion() {
   responseDiv.innerHTML = "Thinking...";
 
   try {
-    const res = await fetch("https://your-replit-url.repl.co/ask", {
+    const res = await fetch("https://your-replit-url.repl.co/ask", {https://replit.com/@leonabedwards/Deepseek-backend}
       method: "POST",
       headers: {
         "Content-Type": "application/json"
